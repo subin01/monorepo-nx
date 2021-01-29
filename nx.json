@@ -38,6 +38,12 @@
         "connect-smart"
       ]
     },
+    "connect-smart-2-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "primary-connect-website"
+      ]
+    },
     "primary-connect-website": {
       "tags": []
     }
