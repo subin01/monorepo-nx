@@ -14,15 +14,11 @@ const GET_LAUNCHES = gql`
   }
 `;
 const GET_POSTS = gql`
-  query($options: PageQueryOptions) {
-    posts(options: $options) {
-      data {
-        id
-        title
-        user {
-          name
-        }
-      }
+  query {
+    posts(sort: "id", dir: "desc") {
+      id
+      title
+      date
     }
   }
 `;
@@ -30,29 +26,15 @@ const GET_POSTS = gql`
 const ADD_POST = gql`
   mutation($input: CreatePostInput!) {
     createPost(input: $input) {
-      id
       title
-      body
+      date
     }
   }
 `;
 
 export default function Blog() {
   const [createPost, { createData }] = useMutation(ADD_POST);
-  const { loading, error, data } = useQuery(GET_POSTS, {
-    variables: {
-      options: {
-        sort: {
-          field: 'id',
-          order: 'DESC',
-        },
-        paginate: {
-          page: 1,
-          limit: 5,
-        },
-      },
-    },
-  });
+  const { loading, error, data } = useQuery(GET_POSTS, {});
 
   const inputRef = useRef();
 
@@ -63,7 +45,8 @@ export default function Blog() {
       variables: {
         input: {
           title: inputRef.current.value,
-          body: 'Some interesting content.',
+          user_id: '1',
+          date: '2019-10-10',
         },
       },
     });
@@ -86,10 +69,11 @@ export default function Blog() {
           </h2>
         </form>
       </article>
-      {data.posts.data.map((l) => (
+      {data?.posts?.map((l) => (
         <article key={l.id}>
+          <em>{l.id}</em>
           <h2>{l.title}</h2>
-          <em>By {l.user.name}</em>
+          <p>{l.date}</p>
         </article>
       ))}
       {/* <pre>{JSON.stringify(data)}</pre> */}

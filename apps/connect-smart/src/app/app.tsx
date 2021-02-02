@@ -10,8 +10,8 @@ import star from './star.svg';
 import Blog from './Blog/Blog';
 
 const client = new ApolloClient({
-  // uri: 'https://fakeql.com/graphql/73d05b0dfa68b3bcd440a20f5ae2d929',
-  uri: 'https://graphqlzero.almansi.me/api',
+  uri: 'https://fakeql.com/graphql/73d05b0dfa68b3bcd440a20f5ae2d929',
+  // uri: 'https://graphqlzero.almansi.me/api',
   // uri: 'http://api.spacex.land/graphql/',
 });
 
