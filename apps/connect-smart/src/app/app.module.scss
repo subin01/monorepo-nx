@@ -1,7 +1,6 @@
 .app {
   font-family: sans-serif;
   min-width: 300px;
-  max-width: 600px;
   margin: 50px auto;
 }
 
@@ -125,4 +124,21 @@
   height: 16px;
   width: 16px;
   margin-right: 4px;
+}
+
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+article {
+  width: 29%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 1%;
+  padding: 1%;
+  border-radius: 0.5rem;
 }
