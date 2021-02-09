@@ -1,36 +1,6 @@
 import React, { useRef } from 'react';
-import { gql, useQuery, useMutation } from '@apollo/client';
-
-const GET_LAUNCHES = gql`
-  query {
-    launchesPast(limit: 10) {
-      id
-      mission_name
-      launch_date_local
-      rocket {
-        rocket_name
-      }
-    }
-  }
-`;
-const GET_POSTS = gql`
-  query {
-    posts(sort: "id", dir: "desc") {
-      id
-      title
-      date
-    }
-  }
-`;
-
-const ADD_POST = gql`
-  mutation($input: CreatePostInput!) {
-    createPost(input: $input) {
-      title
-      date
-    }
-  }
-`;
+import { useQuery, useMutation } from '@apollo/client';
+import { GET_POSTS, ADD_POST } from '../graphql/queries';
 
 export default function Blog() {
   const [createPost, { createData }] = useMutation(ADD_POST);
