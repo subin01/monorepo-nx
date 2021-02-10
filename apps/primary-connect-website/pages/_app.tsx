@@ -2,6 +2,9 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ReactComponent as NxLogo } from '../public/nx-logo-white.svg';
+import { DatePicker, Button } from 'antd';
+import 'antd/dist/antd.css';
+
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
@@ -16,6 +19,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
           <h1>Welcome to connect-smart-2!</h1>
         </header>
         <main>
+          <div style={{ marginTop: 50 }}>
+            <DatePicker></DatePicker>
+            <Button>Search</Button>
+          </div>
           <Component {...pageProps} />
         </main>
       </div>
