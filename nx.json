@@ -34,6 +34,7 @@
       "implicitDependencies": ["primary-connect-website"]
     },
     "primary-connect-website": { "tags": [] },
-    "maps": { "tags": [] }
+    "maps": { "tags": [] },
+    "maps-e2e": { "tags": [], "implicitDependencies": ["maps"] }
   }
 }
