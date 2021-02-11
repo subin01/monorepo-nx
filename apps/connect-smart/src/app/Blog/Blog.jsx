@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import Box from '@material-ui/core/Box';
+import Typography from '@material-ui/core/Typography';
 import { useQuery, useMutation } from '@apollo/client';
 import { GET_POSTS, ADD_POST } from '../graphql/queries';
 
@@ -24,27 +26,54 @@ export default function Blog() {
 
   if (loading)
     return (
-      <article style={{ width: '100%' }}>
-        <h1>Loading ...</h1>
-      </article>
+      <Box
+        border={1}
+        borderColor="secondary.main"
+        bgcolor="primary.contrastText"
+        borderRadius={4}
+        my={2}
+        p={2}
+        style={{ width: '100%' }}
+      >
+        <Typography variant="h1">Loading ...</Typography>
+      </Box>
     );
   return (
     <>
-      <h1 style={{ width: '100%' }}>Posts</h1>
-      <article>
+      <Typography variant="h1" style={{ width: '100%' }}>
+        Posts
+      </Typography>
+      <Box
+        border={1}
+        borderColor="secondary.main"
+        bgcolor="primary.contrastText"
+        borderRadius={4}
+        my={2}
+        p={2}
+        width={1 / 4}
+      >
         <form onSubmit={(e) => handleSubmit(e)}>
           <h2>
             <input ref={inputRef} />
             <button type="submit">Add</button>
           </h2>
         </form>
-      </article>
+      </Box>
       {data?.posts?.map((l) => (
-        <article key={l.id}>
+        <Box
+          border={1}
+          borderColor="secondary.main"
+          bgcolor="primary.contrastText"
+          borderRadius={4}
+          my={2}
+          p={2}
+          width={1 / 4}
+          key={l.id}
+        >
           <em>{l.id}</em>
           <h2>{l.title}</h2>
           <p>{l.date}</p>
-        </article>
+        </Box>
       ))}
       {/* <pre>{JSON.stringify(data)}</pre> */}
     </>

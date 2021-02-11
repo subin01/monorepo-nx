@@ -5,6 +5,8 @@ import {
   createMuiTheme,
   makeStyles,
 } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -14,7 +16,7 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-
+import Orders from './Orders/orders';
 import styles from './app.module.scss';
 
 import { themeOptions, useStyles } from './mui-theme';
@@ -41,7 +43,7 @@ export function App() {
               <IconButton edge="start" color="inherit" aria-label="menu">
                 <MenuIcon />
               </IconButton>
-              <Typography variant="h6">Connect Smart</Typography>
+              <img src="../assets/pc-logo.png" />
               <div className={classes.menuIcons}>
                 <SearchIcon />
                 <NotificationsIcon />
@@ -51,7 +53,7 @@ export function App() {
           </AppBar>
 
           <main>
-            <div style={{ marginTop: 80 }}>
+            <div style={{ marginTop: 80, width: '100%' }}>
               <Typography variant="h1">Welcome to connect-smart!</Typography>
               <Button color="primary" variant="contained" disableElevation>
                 Primary
@@ -59,6 +61,19 @@ export function App() {
               <Button color="secondary" variant="contained" disableElevation>
                 Secondary
               </Button>
+              <Grid container>
+                <Grid item xs={12}>
+                  <Box
+                    borderTop={4}
+                    borderColor="primary.main"
+                    bgcolor="primary.contrastText"
+                    my={2}
+                    p={2}
+                  >
+                    <Orders></Orders>
+                  </Box>
+                </Grid>
+              </Grid>
             </div>
             <Blog></Blog>
           </main>

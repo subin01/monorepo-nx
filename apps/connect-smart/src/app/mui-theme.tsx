@@ -2,7 +2,6 @@ import { ThemeOptions } from '@material-ui/core/styles/createMuiTheme';
 import { makeStyles } from '@material-ui/core/styles';
 
 export const themeOptions: ThemeOptions = {
-  themeName: 'Primary Connect',
   palette: {
     type: 'light',
     primary: {
@@ -23,27 +22,43 @@ export const themeOptions: ThemeOptions = {
     fontFamily: 'Open Sans',
     fontWeightRegular: 400,
     h1: {
-      fontSize: '4rem',
+      fontFamily: 'Montserrat',
+      fontSize: '2rem',
       fontWeight: 800,
+      textTransform: 'uppercase',
+      color: '#39464e',
+    },
+    h2: {
+      fontFamily: 'Montserrat',
+      fontSize: '1.7rem',
+      fontWeight: 800,
+      textTransform: 'uppercase',
+      color: '#39464e',
     },
     h3: {
-      fontFamily: 'Open Sans',
+      fontFamily: 'Montserrat',
+      fontSize: '1.4rem',
+      fontWeight: 800,
+      textTransform: 'uppercase',
+      color: '#39464e',
+    },
+    h4: {
+      fontFamily: 'Montserrat',
+      fontSize: '1.2rem',
+      fontWeight: 800,
+      textTransform: 'uppercase',
     },
     body1: {
       fontFamily: 'Open Sans',
     },
+    button: {
+      fontFamily: 'Montserrat',
+      fontSize: '1rem',
+    },
   },
   spacing: 8,
   shape: {
-    borderRadius: 4,
-  },
-  overrides: {
-    MuiAppBar: {
-      colorInherit: {
-        backgroundColor: '#689f38',
-        color: '#fff',
-      },
-    },
+    borderRadius: 0,
   },
   props: {
     MuiAppBar: {
@@ -60,9 +75,6 @@ export const themeOptions: ThemeOptions = {
       dense: true,
     },
     MuiTable: {
-      size: 'small',
-    },
-    MuiButton: {
       size: 'small',
     },
     MuiButtonGroup: {
