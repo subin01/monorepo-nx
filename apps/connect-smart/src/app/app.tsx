@@ -16,12 +16,12 @@ import Button from '@material-ui/core/Button';
 import SearchIcon from '@material-ui/icons/Search';
 import PersonIcon from '@material-ui/icons/Person';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import Orders from './Orders/orders';
 import styles from './app.module.scss';
-
 import { themeOptions, useStyles } from './mui-theme';
-
+import Orders from './Orders/orders';
 import Blog from './Blog/Blog';
+import { Maps } from '@primary-connect/maps';
+
 const client = new ApolloClient({
   uri: 'https://fakeql.com/graphql/73d05b0dfa68b3bcd440a20f5ae2d929',
   // uri: 'https://graphqlzero.almansi.me/api',
@@ -55,6 +55,7 @@ export function App() {
           <main>
             <div style={{ marginTop: 80, width: '100%' }}>
               <Typography variant="h1">Welcome to connect-smart!</Typography>
+              <Maps />
               <Button color="primary" variant="contained" disableElevation>
                 Primary
               </Button>

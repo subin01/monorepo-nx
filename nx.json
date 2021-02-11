@@ -1,14 +1,9 @@
 {
   "npmScope": "primary-connect-workspace",
-  "affected": {
-    "defaultBase": "master"
-  },
+  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": { "dependencies": "*", "devDependencies": "*" },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
@@ -29,23 +24,16 @@
     }
   },
   "projects": {
-    "connect-smart": {
-      "tags": []
-    },
+    "connect-smart": { "tags": [] },
     "connect-smart-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "connect-smart"
-      ]
+      "implicitDependencies": ["connect-smart"]
     },
     "connect-smart-2-e2e": {
       "tags": [],
-      "implicitDependencies": [
-        "primary-connect-website"
-      ]
+      "implicitDependencies": ["primary-connect-website"]
     },
-    "primary-connect-website": {
-      "tags": []
-    }
+    "primary-connect-website": { "tags": [] },
+    "maps": { "tags": [] }
   }
 }
