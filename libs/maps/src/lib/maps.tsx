@@ -23,7 +23,9 @@ export function Maps(props: MapsProps) {
       }}
     >
       <h1 style={{ width: '100%' }}>Library: MAP</h1>
-      <h2 style={{ width: '100%' }}>{props.location}</h2>
+      <button style={{ width: '20%', padding: '0.5rem' }}>
+        {props.location || 'No location'}
+      </button>
     </div>
   );
 }
