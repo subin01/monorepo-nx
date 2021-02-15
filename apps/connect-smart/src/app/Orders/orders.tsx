@@ -7,11 +7,36 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import Input from '@material-ui/core/Input';
+import SearchIcon from '@material-ui/icons/Search';
+import IconButton from '@material-ui/core/IconButton';
+import Box from '@material-ui/core/Box';
 
 // Generate Order Data
 function createData(id, date, name, shipTo, paymentMethod, amount) {
   return { id, date, name, shipTo, paymentMethod, amount };
 }
+
+const columns = [
+  { field: 'id', headerName: 'ID', width: 70 },
+  { field: 'date', headerName: 'date', width: 160 },
+  { field: 'name', headerName: 'First name', width: 230 },
+  { field: 'shipTo', headerName: 'Last name', width: 230 },
+  {
+    field: 'paymentMethod',
+    headerName: 'Payment Method',
+    type: 'number',
+    width: 190,
+  },
+  {
+    field: 'amount',
+    headerName: 'Amount',
+    type: 'number',
+    width: 190,
+  },
+];
 
 const rows = [
   createData(
@@ -63,14 +88,49 @@ function preventDefault(event) {
 const useStyles = makeStyles((theme) => ({
   seeMore: {
     marginTop: theme.spacing(3),
+    width: '30%',
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  searchBar: {
+    display: 'flex',
+    justifyContent: 'left',
+    marginBottom: theme.spacing(3),
+    width: '50%',
+
+    '& > *': {
+      marginRight: theme.spacing(3),
+    },
   },
 }));
 
 export default function Orders() {
   const classes = useStyles();
   return (
-    <>
-      <Typography variant="h3">Orders</Typography>
+    <Box
+      borderTop={4}
+      borderColor="primary.main"
+      bgcolor="primary.contrastText"
+      my={2}
+      p={2}
+      width="100%"
+    >
+      <div className={classes.searchBar}>
+        <Typography variant="h3">Search</Typography>
+        <Select defaultValue="Orders">
+          <MenuItem value="Orders">Orders</MenuItem>
+          <MenuItem value="Quotes">Quotes</MenuItem>
+        </Select>
+        <Input
+          type="search"
+          placeholder="Order number..."
+          fullWidth
+          margin="none"
+        />
+        <IconButton type="submit" aria-label="search">
+          <SearchIcon />
+        </IconButton>
+      </div>
       <Table>
         <TableHead>
           <TableRow>
@@ -95,9 +155,15 @@ export default function Orders() {
       </Table>
       <div className={classes.seeMore}>
         <Button color="primary" variant="contained" onClick={preventDefault}>
-          See more orders
+          Primary
+        </Button>
+        <Button color="secondary" variant="contained" disableElevation>
+          Secondary
+        </Button>
+        <Button color="secondary" variant="outlined" disableElevation>
+          Tertiary
         </Button>
       </div>
-    </>
+    </Box>
   );
 }

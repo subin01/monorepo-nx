@@ -20,6 +20,7 @@ export function Maps(props: MapsProps) {
         margin: '2rem 0',
         padding: '1rem',
         color: '#992200',
+        width: '100%',
       }}
     >
       <h1 style={{ width: '100%' }}>Library: MAP</h1>

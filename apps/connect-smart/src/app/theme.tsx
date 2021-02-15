@@ -47,26 +47,46 @@ export const themeOptions: ThemeOptions = {
       fontSize: '1.2rem',
       fontWeight: 800,
       textTransform: 'uppercase',
+      color: '#39464e',
+    },
+    h5: {
+      fontSize: '1.1rem',
+      fontWeight: 800,
+    },
+    h6: {
+      fontSize: '1rem',
+      fontWeight: 800,
     },
     body1: {
       fontFamily: 'Open Sans',
     },
     button: {
       fontFamily: 'Montserrat',
-      fontSize: '1rem',
+      fontSize: '0.8rem',
     },
   },
   spacing: 8,
   shape: {
     borderRadius: 0,
   },
+  // Customisable props for each components
+  // Eg: https://material-ui.com/api/button/
   props: {
     MuiAppBar: {
       color: 'inherit',
     },
     MuiButtonBase: {
       disableRipple: true,
-      color: '#fff',
+      color: 'contrastText',
+    },
+    MuiButton: {
+      disableElevation: true,
+    },
+    MuiButtonGroup: {
+      size: 'small',
+    },
+    MuiIconButton: {
+      size: 'small',
     },
     MuiList: {
       dense: true,
@@ -75,9 +95,6 @@ export const themeOptions: ThemeOptions = {
       dense: true,
     },
     MuiTable: {
-      size: 'small',
-    },
-    MuiButtonGroup: {
       size: 'small',
     },
     MuiCheckbox: {
@@ -93,9 +110,7 @@ export const themeOptions: ThemeOptions = {
     MuiFormHelperText: {
       margin: 'dense',
     },
-    MuiIconButton: {
-      size: 'small',
-    },
+
     MuiInputBase: {
       margin: 'dense',
     },
@@ -111,6 +126,30 @@ export const themeOptions: ThemeOptions = {
     MuiTextField: {
       margin: 'dense',
       size: 'small',
+    },
+  },
+  // Overrides for each components, CSS section in doc.
+  // Eg: https://material-ui.com/api/button/#css
+  // .MuiButton-root, .MuiButton-containedPrimary
+  // <Base>-<Rule-name>
+  overrides: {
+    MuiButton: {
+      root: {
+        textTransform: 'uppercase',
+      },
+      containedPrimary: {
+        textAlign: 'center',
+      },
+    },
+    MuiTableHead: {
+      root: {
+        background: '#f6f6f6',
+      },
+    },
+    MuiTableCell: {
+      head: {
+        fontWeight: 'bold',
+      },
     },
   },
 };

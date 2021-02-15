@@ -15,10 +15,14 @@ export const GET_LAUNCHES = gql`
 
 export const GET_POSTS = gql`
   query {
-    posts(sort: "id", dir: "desc") {
+    posts(sort: "id", dir: "asc", limit: 10) {
       id
       title
       date
+      user {
+        firstname
+        age
+      }
     }
   }
 `;
