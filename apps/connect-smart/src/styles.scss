@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #e5e5e5;
+}
+
+main {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-wrap {
+  padding: 0 0.5rem;
+  margin: 1rem 0;
+  border: 1px solid #889095;
+  border-radius: 4px;
+}

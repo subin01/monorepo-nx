@@ -50,8 +50,11 @@ export const themeOptions: ThemeOptions = {
       color: '#39464e',
     },
     h5: {
-      fontSize: '1.1rem',
+      fontFamily: 'Montserrat',
+      fontSize: '0.9rem',
       fontWeight: 800,
+      textTransform: 'uppercase',
+      color: '#39464e',
     },
     h6: {
       fontSize: '1rem',
@@ -141,6 +144,36 @@ export const themeOptions: ThemeOptions = {
         textAlign: 'center',
       },
     },
+    // MuiTextField: {
+    //   root: {
+    //     boxSizing: 'border-box',
+    //     border: '1px solid #889095',
+    //     padding: '0.5rem',
+    //     borderRadius: '0.5rem',
+    //   },
+    // },
+    // MuiFilledInput: {
+    //   root: {
+    //     backgroundColor: 'none',
+    //   },
+    // },
+    MuiAlert: {
+      root: {
+        boxShadow:
+          '0px 2px 4px rgba(0, 0, 0, 0.16), 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 1px 16px rgba(0, 0, 0, 0.08)',
+        borderRadius: '2px',
+      },
+      standardInfo: {
+        backgroundColor: '#fff',
+        color: ' #39464e',
+        borderLeft: '4px solid #2D9CDB',
+      },
+      standardSuccess: {
+        backgroundColor: '#fff',
+        color: ' #39464e',
+        borderLeft: '4px solid #27AE60',
+      },
+    },
     MuiTableHead: {
       root: {
         background: '#f6f6f6',
@@ -149,6 +182,20 @@ export const themeOptions: ThemeOptions = {
     MuiTableCell: {
       head: {
         fontWeight: 'bold',
+      },
+    },
+    MuiCard: {
+      root: {
+        padding: '1rem 0.5rem 0.5rem 0.5rem',
+        borderRadius: '0.5rem',
+        border: '1px solid #889095',
+      },
+    },
+    MuiDivider: {
+      root: {
+        margin: '2rem 0',
+        borderTop: '3px dotted #97bb3a',
+        backgroundColor: 'none',
       },
     },
   },

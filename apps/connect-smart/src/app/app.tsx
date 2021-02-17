@@ -2,7 +2,6 @@ import React from 'react';
 import { ApolloProvider, ApolloClient, InMemoryCache } from '@apollo/client';
 import { ThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -14,7 +13,8 @@ import PersonIcon from '@material-ui/icons/Person';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import styles from './app.module.scss';
 import { themeOptions, useStyles } from './theme';
-import Orders from './Orders/orders';
+import Orders from './Orders/Orders';
+import Elements from './Elements/Elements';
 import Blog from './Blog/Blog';
 import { Maps } from '@primary-connect/maps';
 
@@ -50,17 +50,11 @@ export function App() {
 
           <main>
             <div style={{ marginTop: 80, width: '100%' }}>
-              <Grid container>
+              <Grid container spacing={2}>
+                <Elements></Elements>
+
                 <Grid item xs={12}>
                   <Orders></Orders>
-                </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h1">Heading 1</Typography>
-                  <Typography variant="h2">Heading 2</Typography>
-                  <Typography variant="h3">Heading 3</Typography>
-                  <Typography variant="h4">Heading 4</Typography>
-                  <Typography variant="h5">Heading 5</Typography>
-                  <Typography variant="h6">Heading 6</Typography>
                 </Grid>
 
                 <Grid item xs={12}>
