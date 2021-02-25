@@ -12,7 +12,7 @@
             "{options.outputPath}"
           ],
           "options": {
-            "outputPath": "dist/apps/connect-smart",
+            "outputPath": "docs/apps/connect-smart",
             "index": "apps/connect-smart/src/index.html",
             "main": "apps/connect-smart/src/main.tsx",
             "polyfills": "apps/connect-smart/src/polyfills.ts",
@@ -151,7 +151,7 @@
           ],
           "options": {
             "root": "apps/primary-connect-website",
-            "outputPath": "dist/apps/primary-connect-website"
+            "outputPath": "docs/apps/primary-connect-website"
           },
           "configurations": {
             "production": {}
@@ -213,7 +213,7 @@
           "executor": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/connect-smart-2",
+            "outputPath": "docs/storybook/connect-smart-2",
             "config": {
               "configFolder": "apps/primary-connect-website/.storybook"
             }
@@ -268,7 +268,7 @@
           "executor": "@nrwl/storybook:build",
           "options": {
             "uiFramework": "@storybook/react",
-            "outputPath": "dist/storybook/maps",
+            "outputPath": "docs/storybook/maps",
             "config": {
               "configFolder": "libs/maps/.storybook"
             }
