@@ -1,0 +1,1 @@
+{"ast":null,"code":"var routes = [{\n  path: '/',\n  name: 'Home'\n}, {\n  path: '/shipments',\n  name: 'Shipments'\n}];\nexport default routes;","map":null,"metadata":{},"sourceType":"module"}

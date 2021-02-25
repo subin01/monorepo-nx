@@ -157,23 +157,23 @@ export const themeOptions: ThemeOptions = {
     //     backgroundColor: 'none',
     //   },
     // },
-    MuiAlert: {
-      root: {
-        boxShadow:
-          '0px 2px 4px rgba(0, 0, 0, 0.16), 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 1px 16px rgba(0, 0, 0, 0.08)',
-        borderRadius: '2px',
-      },
-      standardInfo: {
-        backgroundColor: '#fff',
-        color: ' #39464e',
-        borderLeft: '4px solid #2D9CDB',
-      },
-      standardSuccess: {
-        backgroundColor: '#fff',
-        color: ' #39464e',
-        borderLeft: '4px solid #27AE60',
-      },
-    },
+    // MuiAlert: {
+    //   root: {
+    //     boxShadow:
+    //       '0px 2px 4px rgba(0, 0, 0, 0.16), 0px 4px 8px rgba(0, 0, 0, 0.12), 0px 1px 16px rgba(0, 0, 0, 0.08)',
+    //     borderRadius: '2px',
+    //   },
+    //   standardInfo: {
+    //     backgroundColor: '#fff',
+    //     color: ' #39464e',
+    //     borderLeft: '4px solid #2D9CDB',
+    //   },
+    //   standardSuccess: {
+    //     backgroundColor: '#fff',
+    //     color: ' #39464e',
+    //     borderLeft: '4px solid #27AE60',
+    //   },
+    // },
     MuiTableHead: {
       root: {
         background: '#f6f6f6',
